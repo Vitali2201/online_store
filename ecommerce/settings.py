@@ -117,9 +117,15 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
+# we combined the path of a directory and a file together to get a working path
+STATICFILES_DIRS = [
+    os.path.join(BASE_DIR, 'static')
+]
+
 # Default primary key field type
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
 
 MEDIA_URL = '/images/'
 
+# we combined the path of a directory and a file together to get a working path
 MEDIA_ROOT = os.path.join(BASE_DIR, 'static/images')

@@ -1,17 +1,13 @@
-from django.shortcuts import render
+from django.shortcuts import render #Выполняет указанный шаблон с переданным словарем контекста и возвращает HttpResponse с полученным содержимым.
 from django.http import JsonResponse
 import json
 import datetime
 from .models import * 
-from .utils import cookieCart, cartData, guestOrder
+from .utils import cartData, guestOrder
 
 def store(request):
 	data = cartData(request)
-
 	cartItems = data['cartItems']
-	order = data['order']
-	items = data['items']
-
 	products = Product.objects.all()
 	context = {'products':products, 'cartItems':cartItems}
 	return render(request, 'store/store.html', context)
@@ -19,21 +15,17 @@ def store(request):
 
 def cart(request):
 	data = cartData(request)
-
 	cartItems = data['cartItems']
 	order = data['order']
 	items = data['items']
-
 	context = {'items':items, 'order':order, 'cartItems':cartItems}
 	return render(request, 'store/cart.html', context)
 
 def checkout(request):
 	data = cartData(request)
-	
 	cartItems = data['cartItems']
 	order = data['order']
 	items = data['items']
-
 	context = {'items':items, 'order':order, 'cartItems':cartItems}
 	return render(request, 'store/checkout.html', context)
 
@@ -41,8 +33,8 @@ def updateItem(request):
 	data = json.loads(request.body)
 	productId = data['productId']
 	action = data['action']
-	print('Action:', action)
-	print('Product:', productId)
+	# print('Action:', action)
+	# print('Product:', productId)
 
 	customer = request.user.customer
 	product = Product.objects.get(id=productId)
@@ -62,9 +54,10 @@ def updateItem(request):
 
 	return JsonResponse('Item was added', safe=False)
 
+
 def processOrder(request):
 	transaction_id = datetime.datetime.now().timestamp()
-	data = json.loads(request.body)
+	data = json.loads(request.body) #декодирование
 
 	if request.user.is_authenticated:
 		customer = request.user.customer
@@ -85,8 +78,8 @@ def processOrder(request):
 		order=order,
 		address=data['shipping']['address'],
 		city=data['shipping']['city'],
-		state=data['shipping']['state'],
-		zipcode=data['shipping']['zipcode'],
+		# state=data['shipping']['state'],
+		# zipcode=data['shipping']['zipcode'],
 		)
 
 	return JsonResponse('Payment submitted..', safe=False)
