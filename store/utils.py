@@ -30,12 +30,12 @@ def cookieCart(request):
                     'id': product.id,
                     'product': {'id': product.id, 'name': product.name, 'price': product.price,
                                 'imageURL': product.imageURL}, 'quantity': cart[i]['quantity'],
-                    'digital': product.digital, 'get_total': total,
+                    'get_total': total,
                 }
                 items.append(item)
 
-                if product.digital == False:
-                    order['shipping'] = True
+                # if product.digital == False:
+                #     order['shipping'] = True
         except:
             pass
 
@@ -81,7 +81,7 @@ def guestOrder(request, data):
             product=product,
             order=order,
             quantity=(item['quantity'] if item['quantity'] > 0 else -1 * item['quantity']),
-            # negative quantity = freebies
+
         )
     return customer, order
 

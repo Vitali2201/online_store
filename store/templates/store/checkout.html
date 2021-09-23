@@ -18,10 +18,10 @@
                         </div>
 					</div>
 
-					<div id="shipping-info">
-						<hr>
-						<p>Shipping Information:</p>
-						<hr>
+{#					<div id="shipping-info">#}
+{#						<hr>#}
+{#						<p>Shipping Information:</p>#}
+{#						<hr>#}
 						<div class="form-field">
                             <label>
                                 <input class="form-control" type="text" name="address" placeholder="Address..">
@@ -32,25 +32,25 @@
                                 <input class="form-control" type="text" name="city" placeholder="City..">
                             </label>
                         </div>
-						<div class="form-field">
-                            <label>
-                                <input class="form-control" type="text" name="state" placeholder="State..">
-                            </label>
-                        </div>
-						<div class="form-field">
-                            <label>
-                                <input class="form-control" type="text" name="zipcode" placeholder="Zip code..">
-                            </label>
-                        </div>
-						<div class="form-field">
-                            <label>
-                                <input class="form-control" type="text" name="country" placeholder="Zip code..">
-                            </label>
-                        </div>
-					</div>
+{#						<div class="form-field">#}
+{#                            <label>#}
+{#                                <input class="form-control" type="text" name="state" placeholder="State..">#}
+{#                            </label>#}
+{#                        </div>#}
+{#						<div class="form-field">#}
+{#                            <label>#}
+{#                                <input class="form-control" type="text" name="zipcode" placeholder="Zip code..">#}
+{#                            </label>#}
+{#                        </div>#}
+{#						<div class="form-field">#}
+{#                            <label>#}
+{#                                <input class="form-control" type="text" name="country" placeholder="Zip code..">#}
+{#                            </label>#}
+{#                        </div>#}
+{#					</div>#}
 
 					<hr>
-					<input id="form-button" class="btn btn-success btn-block" type="submit" value="Continue">
+					<input id="form-button" class="btn btn-success btn-block" type="submit" value="Continue" >
 				</form>
 			</div>
 
@@ -165,15 +165,15 @@
             const shippingInfo = {
                 'address': null,
                 'city': null,
-                'state': null,
-                'zipcode': null,
+                {#'state': null,#}
+                {#'zipcode': null,#}
             };
 
             if (shipping !== 'False'){
 	    		shippingInfo.address = form.address.value
 		    	shippingInfo.city = form.city.value
-		    	shippingInfo.state = form.state.value
-		    	shippingInfo.zipcode = form.zipcode.value
+		    	{#shippingInfo.state = form.state.value#}
+		    	{#shippingInfo.zipcode = form.zipcode.value#}
 	    	}
 
 	    	if (user === 'AnonymousUser'){
@@ -190,14 +190,14 @@
 	    		headers:{
 	    			'Content-Type':'applicaiton/json',
 	    			'X-CSRFToken':csrftoken,
-	    		}, 
+	    		},
 	    		body:JSON.stringify({'form':userFormData, 'shipping':shippingInfo}),
-	    		
+
 	    	})
 	    	.then((response) => response.json())
 	    	.then((data) => {
 				console.log('Success:', data);
-				alert('Transaction completed');  
+				alert('Transaction completed');
 
 				cart = {}
 				document.cookie ='cart=' + JSON.stringify(cart) + ";domain=;path=/"
@@ -210,4 +210,4 @@
 {% endblock content %}
 
 
- 
+
