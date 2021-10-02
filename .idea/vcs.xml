@@ -2,6 +2,7 @@
 <project version="4">
   <component name="VcsDirectoryMappings">
     <mapping directory="$PROJECT_DIR$" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/git@github.com:Vitali2201/online_store.git" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/https:/github.com/Vitali2201/online_store.git" vcs="Git" />
   </component>
 </project>

@@ -4,18 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5c09dfc2-13f9-4225-8e68-605c40bf228c" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/js/cart.js" afterDir="false" />
+    <list default="true" id="5c09dfc2-13f9-4225-8e68-605c40bf228c" name="Changes" comment="editing fields in the order">
+      <change afterPath="$PROJECT_DIR$/store/templates/store/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/store/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/store/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/store/templates/store/checkout.html" beforeDir="false" afterPath="$PROJECT_DIR$/store/templates/store/checkout.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/store/templates/store/main.html" beforeDir="false" afterPath="$PROJECT_DIR$/store/templates/store/main.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/store/templates/store/store.html" beforeDir="false" afterPath="$PROJECT_DIR$/store/templates/store/store.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/store/utils.py" beforeDir="false" afterPath="$PROJECT_DIR$/store/utils.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/store/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/store/views.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -25,16 +19,27 @@
   <component name="DjangoConsoleOptions" custom-start-script="import sys; print('Python %s on %s' % (sys.version, sys.platform))&#10;import django; print('Django %s' % django.get_version())&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;if 'setup' in dir(django): django.setup()&#10;import django_manage_shell; django_manage_shell.run(PROJECT_ROOT)">
     <option name="myCustomStartScript" value="import sys; print('Python %s on %s' % (sys.version, sys.platform))&#10;import django; print('Django %s' % django.get_version())&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;if 'setup' in dir(django): django.setup()&#10;import django_manage_shell; django_manage_shell.run(PROJECT_ROOT)" />
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="HTML File" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectId" id="1yNGDtbeAm85rpdblQfpSfww50e" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
@@ -50,6 +55,10 @@
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/static" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
+      <recent name="$PROJECT_DIR$/venv" />
     </key>
   </component>
   <component name="RunManager">
@@ -92,7 +101,8 @@
       <workItem from="1632252124417" duration="308000" />
       <workItem from="1632310068034" duration="2049000" />
       <workItem from="1632317955807" duration="15352000" />
-      <workItem from="1632408257454" duration="3430000" />
+      <workItem from="1632408257454" duration="9821000" />
+      <workItem from="1633189336424" duration="170000" />
     </task>
     <task id="LOCAL-00001" summary="editing fields in the order">
       <created>1632248280024</created>
@@ -108,6 +118,7 @@
     <option name="version" value="3" />
   </component>
   <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="editing fields in the order" />
     <option name="LAST_COMMIT_MESSAGE" value="editing fields in the order" />
   </component>
